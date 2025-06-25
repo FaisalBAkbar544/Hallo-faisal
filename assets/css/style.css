@@ -1,0 +1,348 @@
+/* === TETAPKAN BODY === */
+body {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 22px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* === DARK THEME === */
+body.dark-theme {
+    background-color: #1e1b2e;
+    color: #f0e6ff;
+}
+
+body.dark-theme .navbar {
+    background-color: #0c0420;
+    border-bottom: 1px solid #a855f7;
+}
+
+body.dark-theme .navbar a {
+    color: #d4b0ff !important;
+}
+body.dark-theme .navbar a:hover,
+body.dark-theme .navbar a.active {
+    color: #ffffff !important;
+    border-bottom: 2px solid #ffffff;
+}
+
+body.dark-theme .card,
+body.dark-theme .content {
+    background-color: #2a1b4f;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
+}
+
+/* === LIGHT THEME === */
+body.light-theme {
+    background-color: #f5f5ff;
+    color: #1e1b2e;
+}
+
+body.light-theme .navbar {
+    background-color: #ede7ff;
+    border-bottom: 1px solid #c5aaff;
+}
+
+body.light-theme .navbar a {
+    color: #5a00a0 !important;
+}
+body.light-theme .navbar a:hover,
+body.light-theme .navbar a.active {
+    color: #7b1096 !important;
+    border-bottom: 2px solid #7b1096;
+}
+
+body.light-theme .card,
+body.light-theme .content {
+    background-color: #ffffff;
+    color: #1e1b2e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+/* === HEADER / JUMBOTRON === */
+.jumbotron-home,
+.jumbotron-bio,
+.jumbotron-bio-form,
+.jumbotron-porto,
+.jumbotron-porto-form,
+.jumbotron-contact,
+.jumbotron-contact-form,
+.jumbotron-login,
+.jumbotron-user {
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 100px;
+    color: #f0e6ff;
+    position: relative;
+    z-index: 1;
+}
+
+/* khusus jumbotron-home dengan overlay */
+.jumbotron-home {
+    min-height: 700px;
+    padding-top: 300px;
+    /* background-image: url("../images/bg1.jpeg"); */
+    text-align: left;
+}
+.jumbotron-home::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to right, #1e3a8a, #904e95); /* ungu gelap transparan */
+    z-index: -1;
+}
+.jumbotron-home .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Tambahkan overlay gelap untuk meningkatkan keterbacaan di halaman tertentu */
+.jumbotron-bio::before,
+.jumbotron-contact::before,
+.jumbotron-user::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(30, 27, 46, 0.6); /* overlay ungu gelap transparan */
+    z-index: -1;
+}
+
+/* Background Image Section */
+.jumbotron-bio         { background-image: url("../images/bg4.jpeg"); }
+.jumbotron-bio-form    { background-image: url("../images/bg10.jpeg"); }
+.jumbotron-porto       { background-image: url("../images/bg10.jpeg"); }
+.jumbotron-porto-form  { background-image: url("../images/bg4.jpeg"); }
+.jumbotron-contact     { background-image: url("../images/bg8.jpeg"); }
+.jumbotron-contact-form{ background-image: url("../images/bg12.jpeg"); }
+.jumbotron-login       { background-image: url("../images/bg12.jpeg"); }
+.jumbotron-user        { background-image: url("../images/bg9.jpeg"); }
+
+/* === CONTENT BOX === */
+.content {
+    border: 1px solid #a955ff;
+    background-color: #1f1035; /* warna lebih gelap agar teks lebih terbaca */
+    border-radius: 0.5rem;
+    min-height: 500px;
+    padding: 15px 20px;
+    color: #ffffff; /* warna teks lebih cerah */
+    box-shadow: 0 0 10px rgba(128, 0, 255, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+.content:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(128, 0, 255, 0.4);
+}
+
+/* === FOOTER === */
+/* === FOOTER (DEFAULT) === */
+.footer {
+    width: 100%;
+    height: 100px;
+    font-size: 9pt;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* === DARK THEME FOOTER === */
+body.dark-theme .footer {
+    background-color: #3a0f52;
+    color: #dcd6f7;
+}
+body.dark-theme .footer i a {
+    color: #b266ff;
+    text-decoration: underline;
+}
+body.dark-theme .footer i a:hover {
+    color: #ffffff;
+}
+
+/* === LIGHT THEME FOOTER === */
+body.light-theme .footer {
+    background-color: #e9d7ff;
+    color: #2a003f;
+}
+body.light-theme .footer i a {
+    color: #7b1096;
+    text-decoration: underline;
+}
+body.light-theme .footer i a:hover {
+    color: #000000;
+}
+ 
+
+/* === ERROR MESSAGE === */
+.error-message {
+    color: #ff80bf;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* === IMAGE CARD === */
+.card-img {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* === TAMBAHAN: KARTU (GLOBAL) === */
+.card {
+    background-color: #2a1b4f;
+    color: #f8f8ff;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* === LINK NAV & GLOBAL HOVER === */
+a {
+    color: #d0b0ff;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* === TABEL TEKS DI BIOGRAPHY === */
+.table td,
+.table th {
+    color: #f8f6ff !important;
+    background-color: transparent !important;
+}
+
+/* === OPTIONAL: SMOOTH HOVER SELURUH ELEMEN === */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+/* === NAVBAR STYLING (DIPERBAIKI LAGI) === */
+.navbar {
+    background-color: #0c0420; /* ungu gelap */
+    padding: 8px 20px;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 18px;
+    border-bottom: 1px solid #a855f7;
+    z-index: 10;
+}
+
+.navbar a {
+    color: #2f066e !important; /* ungu pastel */
+    margin-right: 12px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #8e5eff !important; /* ungu lebih gelap, lebih subtle */
+    text-decoration: none;
+    border-bottom: 2px solid #8e5eff;
+    padding-bottom: 2px;
+}
+
+.navbar-brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: #7b1096 !important;
+}
+
+/* responsive tweak */
+@media (max-width: 768px) {
+    .navbar {
+        text-align: center;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 8px 0;
+    }
+}
+
+
+/* Ubah tampilan list group */
+.list-group-item {
+    background-color: #140045; /* Ungu gelap */
+    color: #d1bfff; /* Ungu terang tapi tetap jelas */
+    border: none;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover */
+.list-group-item:hover {
+    background-color: #3a2b6b; /* Lebih gelap pas hover */
+    color: #ffffff;
+}
+
+/* Gambar/icon */
+.list-group-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* === BADAS STYLE === */
+
+/* Judul utama di jumbotron */
+.jumbotron-home h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #f0e6ff;
+    text-shadow: 2px 2px 10px rgba(172, 123, 255, 0.6);
+}
+
+/* Paragraf lead */
+.jumbotron-home .lead {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #d6c1ff;
+    line-height: 1.6;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2);
+    max-width: 600px;
+}
+
+/* Tombol LinkedIn dan GitHub */
+.jumbotron-home .btn {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.jumbotron-home .btn-primary {
+    background-color: #0077b5;
+    border-color: #0077b5;
+}
+
+.jumbotron-home .btn-primary:hover {
+    background-color: #005f91;
+    border-color: #005f91;
+}
+
+.jumbotron-home .btn-dark {
+    background-color: #24292e;
+    border-color: #24292e;
+}
+
+.jumbotron-home .btn-dark:hover {
+    background-color: #000;
+    border-color: #000;
+}
