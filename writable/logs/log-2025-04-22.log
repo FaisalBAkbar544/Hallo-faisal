@@ -1,0 +1,9 @@
+CRITICAL - 2025-04-22 13:43:47 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::form(), 0 passed in D:\Apps\xampp\htdocs\pemweb_codeigniter\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/formulir]
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->form()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
